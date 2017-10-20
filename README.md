@@ -1,2 +1,2 @@
-# vscode-ftp-kr
-vscode extension for ftp edit
+# RemoteManager
+vscode extension for remote ftp edit
