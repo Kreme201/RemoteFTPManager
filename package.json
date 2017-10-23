@@ -1,6 +1,6 @@
 {
-    "name": "remotemanager",
-    "displayName": "RemoteManager",
+    "name": "remote_ftp_manager",
+    "displayName": "RemoteFTPManager",
     "description": "Remote FTP Manager For VSCode",
     "version": "0.0.1",
     "publisher": "kreme",

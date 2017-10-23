@@ -1,2 +1,2 @@
-# RemoteManager
-vscode extension for remote ftp edit
+# RemoteFTPManager
+Remote FTP Manager For VSCode
