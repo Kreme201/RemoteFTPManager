@@ -2,14 +2,15 @@ import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
 
-    let disposable = vscode.commands.registerCommand('extension.sayHello', () => {
+    let disposable = vscode.commands.registerCommand( 'extension.sayHello', sayHello );
+    context.subscriptions.push(disposable);
+
+    function sayHello() {
 
         _alert( 'Hello World!' );
         _debug( 'Hello World' );
 
-    });
-
-    context.subscriptions.push(disposable);
+    }
 
 }
 
