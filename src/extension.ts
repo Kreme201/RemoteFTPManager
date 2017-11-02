@@ -1,13 +1,13 @@
 import * as vscode from 'vscode';
-import { SettingHandler } from './settings';
+import { SessionHandler } from './settings';
 
 
 export function activate(context: vscode.ExtensionContext) {
 
-    let settingHandler: SettingHandler = new SettingHandler();
+    let sessionHandler: SessionHandler = new SessionHandler();
 
 
     // Add Commands
-    context.subscriptions.push( vscode.commands.registerCommand( 'extension.editSettings', () => { settingHandler.open(); } ) );
+    context.subscriptions.push( vscode.commands.registerCommand( 'extension.editSettings', () => { sessionHandler.open(); } ) );
 
 }

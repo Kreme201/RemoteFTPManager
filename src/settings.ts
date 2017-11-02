@@ -31,7 +31,7 @@ class SessionItem implements Session {
     }
 }
 
-export class SettingHandler {
+export class SessionHandler {
 
     private filename: string;
     private sessionList: SessionList;
