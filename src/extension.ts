@@ -1,33 +1,19 @@
 import * as vscode from 'vscode';
+import { FTPManagerSettings } from './FTPManagerSettings';
+
 
 export function activate(context: vscode.ExtensionContext) {
 
-    let disposable = vscode.commands.registerCommand( 'extension.sayHello', sayHello );
-    context.subscriptions.push(disposable);
-
-    function sayHello() {
-
-        _alert( 'Hello World!' );
-        _debug( 'Hello World' );
-
-    }
-
-}
+    let ftpManagerSettings: FTPManagerSettings = new FTPManagerSettings();
 
 
-// Custom Alert Function :: Alias vscode.window.showInfomationMessage
-function _alert( msg: string ) {
-
-    vscode.window.showInformationMessage( msg );
-
-}
-
-// Custom Debug Function :: Alias console.log
-function _debug( obj: any ) {
-
-    console.log( obj );
+    // Add Commands
+    context.subscriptions.push( vscode.commands.registerCommand( 'extension.editSettings', () => { ftpManagerSettings.openSettingFile(); } ) );
 
 }
 
 export function deactivate() {
+
+
+
 }

@@ -11,14 +11,17 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.sayHello"
+        "onCommand:extension.editSettings"
     ],
     "main": "./out/extension",
     "contributes": {
-        "commands": [{
-            "command": "extension.sayHello",
-            "title": "Hello World"
-        }]
+        "commands": [
+            {
+                "command": "extension.editSettings"
+                , "title": "Edit Settings"
+                , "category": "FTP Manager"
+            }
+        ]
     },
     "scripts": {
         "vscode:prepublish": "npm run compile",
