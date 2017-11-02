@@ -11,15 +11,15 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:extension.editSettings"
+        "onCommand:extension.editSessions"
     ],
     "main": "./out/extension",
     "contributes": {
         "commands": [
             {
-                "command": "extension.editSettings"
-                , "title": "Edit Settings"
-                , "category": "FTP Manager"
+                "command": "extension.editSessions"
+                , "title": "Edit Sessions"
+                , "category": "Remote FTP Manager"
             }
         ]
     },

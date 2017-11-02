@@ -8,6 +8,6 @@ export function activate(context: vscode.ExtensionContext) {
 
 
     // Add Commands
-    context.subscriptions.push( vscode.commands.registerCommand( 'extension.editSettings', () => { sessionHandler.open(); } ) );
+    context.subscriptions.push( vscode.commands.registerCommand( 'extension.editSessions', () => { sessionHandler.open(); } ) );
 
 }

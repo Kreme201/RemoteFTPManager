@@ -41,6 +41,13 @@ export class SessionHandler {
         this.filename = this.getFileName();
         this.sessionList   = <SessionList> [];
 
+
+        if ( ! fs.existsSync( this.filename ) ) {
+
+            this.save();
+
+        }
+
     }
 
     /**
@@ -344,12 +351,6 @@ export class SessionHandler {
         if ( ( process.platform === 'linux' ) && ( ! fs.existsSync( settingFile ) ) ) {
 
             settingFile = path.join( os.homedir(), '.config/', channelPath, 'User', 'remote_ftp_manager.json' );
-
-        }
-
-        if ( ! fs.existsSync( settingFile ) ) {
-
-            this.save();
 
         }
 
