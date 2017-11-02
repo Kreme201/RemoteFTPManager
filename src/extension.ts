@@ -1,14 +1,14 @@
 import * as vscode from 'vscode';
-import { FTPManagerSettings } from './FTPManagerSettings';
+import { SettingHandler } from './settings';
 
 
 export function activate(context: vscode.ExtensionContext) {
 
-    let ftpManagerSettings: FTPManagerSettings = new FTPManagerSettings();
+    let settingHandler: SettingHandler = new SettingHandler();
 
 
     // Add Commands
-    context.subscriptions.push( vscode.commands.registerCommand( 'extension.editSettings', () => { ftpManagerSettings.openSettingFile(); } ) );
+    context.subscriptions.push( vscode.commands.registerCommand( 'extension.editSettings', () => { settingHandler.open(); } ) );
 
 }
 
