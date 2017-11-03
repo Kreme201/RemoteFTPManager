@@ -61,14 +61,14 @@ export class SessionHandler {
 
     }
 
-    public push( name: string, type: string, host: string, port: number, username: string, password: string, remote_path: string, connect_timeout: number, localpath: string ): void {
+    public add( name: string, type: string, host: string, port: number, username: string, password: string, remote_path: string, connect_timeout: number, localpath: string ): void {
 
-        this.sessionList.push(new SessionItem( name, type, host, port, username, password, remote_path, connect_timeout, localpath ) );
+        this.sessionList.push( new SessionItem( name, type, host, port, username, password, remote_path, connect_timeout, localpath ) );
         return;
 
     }
 
-    public pop( name: string ): Session {
+    public remove( name: string ): Session {
 
         for ( let index = 0; index < this.sessionList.length; index++ ) {
 
@@ -189,10 +189,10 @@ export class SessionHandler {
 
     private init() {
 
-        if ( ! fs.existsSync( this.filename ) || 1 ) {
+        if ( ! fs.existsSync( this.filename ) ) {
 
             // set setting file with sample item
-            this.push( 'name', 'type', 'host', 21, 'username', 'password', 'remote_path', 30, 'localpath' );
+            this.add( 'name', 'type', 'host', 21, 'username', 'password', 'remote_path', 30, 'localpath' );
             this.save();
 
         }
